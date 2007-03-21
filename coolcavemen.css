@@ -1,0 +1,79 @@
+/*
+ Author Name : Kevin Deldycke
+ Author Site : http://kev.coolcavemen.com
+ Style Name  : coolkevmen
+ Style URI   : http://kev.coolcavemen.com/wp-content/themes/k2/styles/coolkevmen
+ Version     : 0.3
+ Comments    : This is a customization of the WordPress K2 theme I use on my personnal blog ( http://kev.coolcavemen.com ).
+
+ Copyright   : Kevin Deldycke
+ Licence     : GNU/GPL
+*/
+
+#page {
+ padding-top: 0;
+}
+
+#header {
+ /* TODO: Change those sad clouds ! */
+ background: white url(clouds.jpg) center center no-repeat;
+ width: 100%;
+ /* TODO: Reduce page height to make more room for contents ? */
+ height: 215px;
+}
+
+ul {
+ list-style-position: inside;
+/* list-style-type: disc;*/
+}
+
+blockquote {
+ color: #000;
+ background: #f9f9f9;
+ border-width: 1px 1px 1px 3px;
+ border-color: #eee;
+ border-style: dotted dotted dotted solid;
+ padding-right: 1.3em;
+ padding-left: 1.3em;
+}
+
+/* It's easier for the user to spot some widget listing if we show a
+** graphical element before each one, because the visibility of the post
+** list is reduced when long titles get rendered on multiple lines.
+**   TODO: use a fancier image instead of displaying a simple 'disc'.
+*/
+div.sb-latest  ul li,
+div.sb-related ul li {
+  list-style-type: disc;
+}
+
+
+
+/* Margins are not consistent in original K2 theme for images inside a post.
+** This rule put the same 5px margin for each side of the image.
+*/
+#primary .entry-content img {
+  float: left;
+  margin: 5px;
+}
+
+/* Float each link to image within post content to left.
+*/
+#primary .entry-content a.imagelink img {
+  border-color: #a7c0de;
+}
+
+#primary .entry-content a.imagelink:hover img {
+  border-color: #277ade;
+  background-color: #eee;
+}
+
+
+/* Previous rule mess all posts up if one post end with an "imagelink".
+** This rule fix this bad behaviour, on front page and on single post view
+** (=view with comments).
+*/
+#primary .hentry,
+#primary div.comments {
+  clear: both;
+}
